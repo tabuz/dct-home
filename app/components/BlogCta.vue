@@ -19,14 +19,26 @@ defineProps<{
       "
     />
     <!-- Corner brackets -->
-    <div class="absolute left-4 top-4 h-5 w-5 border-l border-t border-emerald-500/30" />
-    <div class="absolute right-4 top-4 h-5 w-5 border-r border-t border-emerald-500/30" />
-    <div class="absolute bottom-4 left-4 h-5 w-5 border-b border-l border-emerald-500/30" />
-    <div class="absolute bottom-4 right-4 h-5 w-5 border-b border-r border-emerald-500/30" />
+    <div
+      class="absolute left-4 top-4 h-5 w-5 border-l border-t border-emerald-500/30"
+    />
+    <div
+      class="absolute right-4 top-4 h-5 w-5 border-r border-t border-emerald-500/30"
+    />
+    <div
+      class="absolute bottom-4 left-4 h-5 w-5 border-b border-l border-emerald-500/30"
+    />
+    <div
+      class="absolute bottom-4 right-4 h-5 w-5 border-b border-r border-emerald-500/30"
+    />
 
-    <div class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+    <div
+      class="relative flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between"
+    >
       <div class="max-w-xl">
-        <div class="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400">
+        <div
+          class="mb-3 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400"
+        >
           How DCT can help
         </div>
         <h3 class="text-xl font-bold tracking-tight text-white sm:text-2xl">
