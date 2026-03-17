@@ -2,6 +2,10 @@
 defineProps<{
   headline: string;
   subheadline: string;
+  badgeText?: string;
+  readArticleText?: string;
+  viewAllButtonText?: string;
+  viewAllButtonLink?: string;
 }>();
 
 const { data: posts } = await useAsyncData("latest-posts", () =>
@@ -17,7 +21,7 @@ const { data: posts } = await useAsyncData("latest-posts", () =>
         <div
           class="mb-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400"
         >
-          Insights
+          {{ badgeText || "Insights" }}
         </div>
         <h2
           class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-5xl max-w-2xl"
@@ -60,7 +64,7 @@ const { data: posts } = await useAsyncData("latest-posts", () =>
           <div
             class="mt-6 flex items-center gap-1 text-sm font-medium text-emerald-400"
           >
-            Read article
+            {{ readArticleText || "Read article" }}
             <UIcon
               name="i-heroicons-arrow-right-16-solid"
               class="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
@@ -70,12 +74,12 @@ const { data: posts } = await useAsyncData("latest-posts", () =>
       </div>
 
       <!-- View all -->
-      <div class="mt-10">
+      <div v-if="viewAllButtonText" class="mt-10">
         <UButton
-          to="/blog"
+          :to="viewAllButtonLink || '/blog'"
           variant="ghost"
           color="neutral"
-          label="View all articles"
+          :label="viewAllButtonText"
           trailing-icon="i-heroicons-arrow-right-16-solid"
           class="border border-zinc-800 bg-zinc-900 text-white hover:bg-zinc-800"
         />

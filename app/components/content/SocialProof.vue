@@ -23,10 +23,18 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
     <div class="mx-auto max-w-7xl px-6">
       <!-- Partner logos strip -->
       <div v-reveal class="mb-20 border-y border-zinc-800 py-10">
-        <p
+        <!-- <p
           class="mb-8 text-center text-xs font-medium uppercase tracking-widest text-zinc-500"
         >
           Trusted by UK construction leaders
+        </p> -->
+        <h2
+          class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-5xl"
+        >
+          {{ headline }}
+        </h2>
+        <p class="mt-6 max-w-3xl text-base text-zinc-400 sm:text-lg">
+          {{ subheadline }}
         </p>
         <div class="flex flex-wrap items-center justify-center gap-16">
           <!-- Travis Perkins plc -->
@@ -36,7 +44,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
             <img
               src="/logos/travis-perkins-plc-logo.png"
               alt="Travis Perkins plc"
-              class="h-34 w-auto object-contain"
+              class="h-38 w-auto object-contain"
             />
           </div>
           <!-- Pam Building -->
@@ -46,7 +54,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
             <img
               src="/logos/pam-building-logo.png"
               alt="Pam Building"
-              class="h-20 w-auto object-contain brightness-200"
+              class="h-18 w-auto object-contain brightness-200"
             />
           </div>
           <!-- Carter Synergy -->
@@ -56,7 +64,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
             <img
               src="/logos/carter-synergy-logo.svg"
               alt="Carter Synergy"
-              class="h-20 w-auto object-contain"
+              class="h-12 w-auto object-contain"
             />
           </div>
         </div>

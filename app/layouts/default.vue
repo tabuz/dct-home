@@ -185,9 +185,13 @@ onMounted(() => {
         v-if="showStickyCta && route.path === '/'"
         class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-800 bg-zinc-950/95 backdrop-blur-md"
       >
-        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+        <div
+          class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3"
+        >
           <p class="hidden text-sm text-zinc-400 sm:block">
-            <span class="font-semibold text-white">Ready to unlock your data?</span>
+            <span class="font-semibold text-white"
+              >Ready to unlock your data?</span
+            >
             &nbsp;Book a free 30-minute discovery call.
           </p>
           <UButton

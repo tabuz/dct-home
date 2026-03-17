@@ -2,6 +2,9 @@
 defineProps<{
   headline: string;
   subheadline: string;
+  badgeText?: string;
+  ctaButtonText?: string;
+  ctaButtonLink?: string;
   steps: Array<{
     number: string;
     title: string;
@@ -32,7 +35,7 @@ defineProps<{
           <span
             class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400"
           >
-            How we work
+            {{ badgeText || "How we work" }}
           </span>
         </div>
 
@@ -86,7 +89,10 @@ defineProps<{
               <p class="mt-2 text-sm leading-relaxed text-zinc-400">
                 {{ step.body }}
               </p>
-              <p v-if="step.timeline" class="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-400">
+              <p
+                v-if="step.timeline"
+                class="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-400"
+              >
                 <UIcon name="i-heroicons-clock" class="text-sm" />
                 {{ step.timeline }}
               </p>
@@ -96,12 +102,16 @@ defineProps<{
       </div>
 
       <!-- CTA -->
-      <div v-reveal="200" class="mt-14 flex justify-center">
+      <div
+        v-if="ctaButtonText"
+        v-reveal="200"
+        class="mt-14 flex justify-center"
+      >
         <UButton
-          to="#contact"
+          :to="ctaButtonLink || '#contact'"
           size="lg"
           color="primary"
-          label="Start with a discovery call"
+          :label="ctaButtonText"
           trailing-icon="i-heroicons-arrow-right-16-solid"
           class="transition-all duration-200 hover:brightness-110"
         />

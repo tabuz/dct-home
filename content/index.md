@@ -5,9 +5,28 @@ description: We architect AI-native workflows and headless ERP integrations for 
 
 ::hero
 ---
+stats:
+  - value: £2B+
+    label: Client Revenue Managed
+  - value: 500+
+    label: Field Users Powered
+  - value: Zero
+    label: ERP Disruptions
+  - value: 100%
+    label: UK Construction Focus
+trustIndicators:
+  - icon: i-heroicons-shield-check
+    text: No disruption
+  - icon: i-heroicons-lock-closed
+    text: Core ERP untouched
+  - icon: i-heroicons-bolt
+    text: Live in weeks
+badgeText: Trusted by FTSE 100 Construction Leaders
 buttonLink: "#contact"
 buttonText: Book a Free Discovery Call
 headline: Engineering Intelligence Into the Built Environment.
+secondaryButtonLink: "#capabilities"
+secondaryButtonText: See our work
 subheadline: We architect AI-native workflows and headless ERP integrations for
   the UK's most demanding construction supply chains. Delivering modern velocity
   without the risk of replacing your core transactional engine.
@@ -81,6 +100,9 @@ steps:
     body: We become your embedded engineering partner. As your commercial needs
       evolve, we iterate alongside you — ensuring your digital infrastructure
       compounds in value over time.
+badgeText: How we work
+ctaButtonLink: "#contact"
+ctaButtonText: Start with a discovery call
 headline: From First Call to Live Deployment.
 subheadline: A low-risk, transparent engagement model built around your
   infrastructure — not against it. No surprises, no disruptions, no failed
@@ -134,7 +156,17 @@ headline: Ready to put your data to work?
 Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field — we have the specialised engineering expertise to deliver it without disrupting your core operations.
 ::
 
-:latest-posts{headline="Engineering Intelligence, Shared Openly." subheadline="Perspectives on headless ERP architecture, AI orchestration, and the future of construction technology — from the team building it."}
+::latest-posts
+---
+badge-text: Insights
+headline: Engineering Intelligence, Shared Openly.
+read-article-text: Read article
+subheadline: Perspectives on headless ERP architecture, AI orchestration, and
+  the future of construction technology — from the team building it.
+view-all-button-link: /blog
+view-all-button-text: View all articles
+---
+::
 
 ::faq
 ---
@@ -178,6 +210,10 @@ headline: Questions Worth Asking.
 subheadline: We work on complex infrastructure in mission-critical environments.
   Here's what every serious prospect deserves to know before picking up the
   phone.
+badgeText: Common questions
+ctaText: Still have questions? We're happy to answer them on a quick call.
+ctaButtonText: Book a Free 30-Min Call
+ctaButtonLink: "#contact"
 ---
 ::
 

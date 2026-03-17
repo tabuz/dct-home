@@ -2,6 +2,10 @@
 defineProps<{
   headline: string;
   subheadline: string;
+  badgeText?: string;
+  ctaText?: string;
+  ctaButtonText?: string;
+  ctaButtonLink?: string;
   items: Array<{
     question: string;
     answer: string;
@@ -23,7 +27,7 @@ function toggle(i: number) {
         <span
           class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400"
         >
-          Common questions
+          {{ badgeText || "Common questions" }}
         </span>
       </div>
 
@@ -82,15 +86,15 @@ function toggle(i: number) {
       </div>
 
       <!-- Post-FAQ CTA -->
-      <div v-reveal="320" class="mt-12 text-center">
-        <p class="mb-5 text-base text-zinc-400">
-          Still have questions? We're happy to answer them on a quick call.
+      <div v-if="ctaButtonText" v-reveal="320" class="mt-12 text-center">
+        <p v-if="ctaText" class="mb-5 text-base text-zinc-400">
+          {{ ctaText }}
         </p>
         <UButton
-          to="#contact"
+          :to="ctaButtonLink || '#contact'"
           size="lg"
           color="primary"
-          label="Book a Free 30-Min Call"
+          :label="ctaButtonText"
           trailing-icon="i-heroicons-arrow-right-16-solid"
           class="transition-all duration-200 hover:brightness-110"
         />

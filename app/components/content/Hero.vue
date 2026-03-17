@@ -4,6 +4,11 @@ defineProps<{
   subheadline: string;
   buttonText: string;
   buttonLink: string;
+  secondaryButtonText?: string;
+  secondaryButtonLink?: string;
+  badgeText?: string;
+  trustIndicators?: Array<{ icon: string; text: string }>;
+  stats?: Array<{ value: string; label: string }>;
 }>();
 </script>
 
@@ -39,7 +44,7 @@ defineProps<{
         <span
           class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-dot-pulse"
         />
-        Trusted by FTSE 100 Construction Leaders
+        {{ badgeText || "Trusted by FTSE 100 Construction Leaders" }}
       </div>
       <h1
         class="bg-linear-to-b from-white to-zinc-400 bg-clip-text text-5xl font-bold leading-[1.1] tracking-tight text-transparent sm:text-7xl animate-fade-up"
@@ -56,23 +61,21 @@ defineProps<{
 
       <!-- Urgency micro-copy -->
       <div
+        v-if="trustIndicators && trustIndicators.length > 0"
         class="mt-6 flex items-center justify-center gap-6 text-sm text-zinc-500 animate-fade-up"
         style="animation-delay: 310ms"
       >
-        <span class="flex items-center gap-1.5">
-          <UIcon name="i-heroicons-shield-check" class="text-emerald-500" />
-          No disruption
-        </span>
-        <span class="h-3 w-px bg-zinc-700" />
-        <span class="flex items-center gap-1.5">
-          <UIcon name="i-heroicons-lock-closed" class="text-emerald-500" />
-          Core ERP untouched
-        </span>
-        <span class="h-3 w-px bg-zinc-700 hidden sm:block" />
-        <span class="hidden sm:flex items-center gap-1.5">
-          <UIcon name="i-heroicons-bolt" class="text-emerald-500" />
-          Live in weeks
-        </span>
+        <template v-for="(indicator, index) in trustIndicators" :key="index">
+          <span class="flex items-center gap-1.5">
+            <UIcon :name="indicator.icon" class="text-emerald-500" />
+            {{ indicator.text }}
+          </span>
+          <span
+            v-if="index < trustIndicators.length - 1"
+            class="h-3 w-px bg-zinc-700"
+            :class="{ 'hidden sm:block': index >= 1 }"
+          />
+        </template>
       </div>
 
       <div
@@ -87,8 +90,9 @@ defineProps<{
           class="transition-all duration-200 hover:brightness-110"
         />
         <UButton
-          label="See our work"
-          to="#capabilities"
+          v-if="secondaryButtonText"
+          :label="secondaryButtonText"
+          :to="secondaryButtonLink || '#'"
           size="xl"
           variant="ghost"
           color="neutral"
@@ -98,20 +102,24 @@ defineProps<{
 
       <!-- Trust strip -->
       <div
-        class="mt-16 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 sm:grid-cols-4 animate-fade-up"
+        v-if="stats && stats.length > 0"
+        class="mt-16 grid gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 animate-fade-up"
+        :class="{
+          'grid-cols-2 sm:grid-cols-4': stats.length === 4,
+          'grid-cols-2 sm:grid-cols-3': stats.length === 3,
+          'grid-cols-2': stats.length === 2,
+          'grid-cols-1': stats.length === 1,
+        }"
         style="animation-delay: 520ms"
       >
         <div
-          v-for="stat in [
-            { value: '£2B+', label: 'Client Revenue Managed' },
-            { value: '500+', label: 'Field Users Powered' },
-            { value: 'Zero', label: 'ERP Disruptions' },
-            { value: '100%', label: 'UK Construction Focus' },
-          ]"
+          v-for="stat in stats"
           :key="stat.label"
           class="flex flex-col items-center gap-1 bg-zinc-900 px-6 py-5 text-center"
         >
-          <span class="text-2xl font-bold text-emerald-400">{{ stat.value }}</span>
+          <span class="text-2xl font-bold text-emerald-400">{{
+            stat.value
+          }}</span>
           <span class="text-xs text-zinc-500">{{ stat.label }}</span>
         </div>
       </div>

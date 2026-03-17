@@ -60,9 +60,17 @@ defineProps<{
             {{ pillar.body }}
           </p>
           <!-- Outcome result chip -->
-          <div v-if="pillar.outcome" class="mt-5 flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 w-fit">
-            <UIcon name="i-heroicons-arrow-trending-up" class="text-sm text-emerald-400" />
-            <span class="text-xs font-medium text-emerald-400">{{ pillar.outcome }}</span>
+          <div
+            v-if="pillar.outcome"
+            class="mt-5 flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 w-fit"
+          >
+            <UIcon
+              name="i-heroicons-arrow-trending-up"
+              class="text-sm text-emerald-400"
+            />
+            <span class="text-xs font-medium text-emerald-400">{{
+              pillar.outcome
+            }}</span>
           </div>
         </div>
       </div>

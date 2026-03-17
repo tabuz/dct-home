@@ -57,7 +57,9 @@ defineProps<{
         </div>
 
         <!-- Risk reversal micro-copy -->
-        <div class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
+        <div
+          class="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
+        >
           <div class="flex items-center gap-2 text-sm text-zinc-500">
             <UIcon name="i-heroicons-shield-check" class="text-emerald-500" />
             <span>No obligation</span>
