@@ -9,7 +9,7 @@ description: The terms and conditions governing use of the Digital Construction 
 
 These Terms and Conditions govern your use of the Digital Construction Technology website, accessible at [www.digitalconstruction.technology](https://www.digitalconstruction.technology). By accessing or using this website, you agree to be bound by these Terms in full. If you disagree with any part of these Terms, please do not use this website.
 
-This website is operated by **Digital Construction Technology**, registered in England and Wales.
+This website is operated by **Digital Construction Technology**, registered in England and Wales (Company No. 10867809).
 
 > DCT — Scrapstore House, 21 Sevier Street, Bristol, BS2 9LB, United Kingdom
 

@@ -80,6 +80,21 @@ function toggle(i: number) {
           </Transition>
         </div>
       </div>
+
+      <!-- Post-FAQ CTA -->
+      <div v-reveal="320" class="mt-12 text-center">
+        <p class="mb-5 text-base text-zinc-400">
+          Still have questions? We're happy to answer them on a quick call.
+        </p>
+        <UButton
+          to="#contact"
+          size="lg"
+          color="primary"
+          label="Book a Free 30-Min Call"
+          trailing-icon="i-heroicons-arrow-right-16-solid"
+          class="transition-all duration-200 hover:brightness-110"
+        />
+      </div>
     </div>
   </section>
 </template>

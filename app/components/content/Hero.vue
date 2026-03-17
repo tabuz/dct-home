@@ -81,10 +81,10 @@ defineProps<{
       >
         <div
           v-for="stat in [
-            { value: 'FTSE 100', label: 'Clients Served' },
-            { value: '100s', label: 'Field Users Powered' },
+            { value: '£2B+', label: 'Client Revenue Managed' },
+            { value: '500+', label: 'Field Users Powered' },
             { value: 'Zero', label: 'ERP Disruptions' },
-            { value: 'UK-Only', label: 'Construction Focus' },
+            { value: '100%', label: 'UK Construction Focus' },
           ]"
           :key="stat.label"
           class="flex flex-col items-center gap-1 bg-zinc-900 px-6 py-5 text-center"

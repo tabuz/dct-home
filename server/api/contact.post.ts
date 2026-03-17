@@ -42,9 +42,18 @@ export default defineEventHandler(async (event) => {
     receivedAt: new Date().toISOString(),
   };
 
-  const webhookUrl =
-    process.env.DISCORD_WEBHOOK_URL ||
-    "https://discord.com/api/webhooks/1483442673867165758/Cx17dGEqNJO7OEARDo281DqSEup7LO45m5ubRzOZHcjCXJd13MphLCab_AaOiU_2iM5_";
+  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
+
+  if (!webhookUrl) {
+    console.error(
+      "[contact form] DISCORD_WEBHOOK_URL environment variable is not set",
+    );
+    throw createError({
+      statusCode: 503,
+      statusMessage:
+        "Contact form temporarily unavailable. Please email us directly.",
+    });
+  }
 
   const discordBody = {
     embeds: [

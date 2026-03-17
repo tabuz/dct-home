@@ -7,7 +7,7 @@ description: We architect AI-native workflows and headless ERP integrations for 
 ---
 headline: Engineering Intelligence Into the Built Environment.
 subheadline: "We architect AI-native workflows and headless ERP integrations for the UK's most demanding construction supply chains — delivering modern velocity without the risk of replacing your core transactional engine."
-buttonText: Book a Discovery Call
+buttonText: Book a Free Discovery Call
 buttonLink: "#contact"
 ---
 ::
@@ -68,19 +68,19 @@ headline: The Digital Spine for Industry Giants.
 subheadline: Trusted by some of the UK's most complex construction businesses, we modernise legacy infrastructure and engineer the operational workflows that drive real competitive advantage.
 cases:
   - company: Travis Perkins plc
-    body: "Engineered the bespoke SalesHub ecosystem — migrating decades of legacy quote and order data into a modern PostgreSQL architecture. Deployed offline-first Progressive Web Apps to hundreds of external field representatives, enabling them to quote, order, and access live commercial data entirely without network connectivity. Teams that previously depended on back-office support now operate autonomously in the field."
+    body: "Engineered the bespoke SalesHub ecosystem — migrating decades of legacy quote and order data into a modern PostgreSQL architecture. Deployed offline-first Progressive Web Apps to 500+ external field representatives, cutting back-office dependency by 80%. Sales teams that previously waited hours for quotes now generate them autonomously in the field — even without network connectivity."
   - company: Pam Building
-    body: "Designed and built a custom Commercial Engine to automate complex rebate logic that had required laborious manual processing. The system handles distributor claimbacks end-to-end and delivers 24/7 self-service customer portals integrated directly with SAP — eliminating reconciliation delays and recovering significant finance team overhead every period."
+    body: "Designed and built a custom Commercial Engine to automate complex rebate logic that consumed 3+ days of manual processing per period. The system handles distributor claimbacks end-to-end and delivers 24/7 self-service customer portals integrated directly with SAP — eliminating reconciliation delays and recovering over 40 hours of finance team overhead every month."
 ---
 ::
 
 ::cta
 ---
 headline: Ready to put your data to work?
-buttonText: Book a Discovery Call
+buttonText: Book Your Free 30-Min Discovery Call
 buttonLink: "#contact"
 ---
-Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field — we have the specialised engineering expertise to deliver it without disrupting your core operations. Most engagements start with a 30-minute call.
+Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field — we have the specialised engineering expertise to deliver it without disrupting your core operations. No obligation, no pitch deck — just a focused 30-minute conversation about your challenges.
 ::
 
 ::latest-posts

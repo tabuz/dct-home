@@ -6,6 +6,7 @@ const route = useRoute();
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/#capabilities" },
+  { label: "Case Studies", path: "/#case-studies" },
   { label: "Blog", path: "/blog" },
 ];
 
@@ -139,6 +140,13 @@ onMounted(() => {
               Services
             </NuxtLink>
             <NuxtLink
+              to="/#case-studies"
+              class="rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white"
+              @click="mobileMenuOpen = false"
+            >
+              Case Studies
+            </NuxtLink>
+            <NuxtLink
               to="/blog"
               class="rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white"
               @click="mobileMenuOpen = false"
@@ -212,7 +220,7 @@ onMounted(() => {
             </a>
             <div class="mt-5 flex items-center gap-3">
               <a
-                href="https://www.linkedin.com/company/digitalconstructiontechnology"
+                href="https://www.linkedin.com/company/digital-construction-technology/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="DCT on LinkedIn"
@@ -241,33 +249,38 @@ onMounted(() => {
             </h3>
             <ul class="space-y-2.5 text-sm text-zinc-500">
               <li>
-                <span
-                  class="transition-colors hover:text-zinc-300 cursor-default"
-                  >Headless ERP Architecture</span
+                <NuxtLink
+                  to="/#capabilities"
+                  class="transition-colors hover:text-zinc-300"
+                  >Headless ERP Architecture</NuxtLink
                 >
               </li>
               <li>
-                <span
-                  class="transition-colors hover:text-zinc-300 cursor-default"
-                  >Office-Native Integrations</span
+                <NuxtLink
+                  to="/#capabilities"
+                  class="transition-colors hover:text-zinc-300"
+                  >Office-Native Integrations</NuxtLink
                 >
               </li>
               <li>
-                <span
-                  class="transition-colors hover:text-zinc-300 cursor-default"
-                  >Field-First Mobile Apps</span
+                <NuxtLink
+                  to="/#capabilities"
+                  class="transition-colors hover:text-zinc-300"
+                  >Field-First Mobile Apps</NuxtLink
                 >
               </li>
               <li>
-                <span
-                  class="transition-colors hover:text-zinc-300 cursor-default"
-                  >AI Workflow Orchestration</span
+                <NuxtLink
+                  to="/#capabilities"
+                  class="transition-colors hover:text-zinc-300"
+                  >AI Workflow Orchestration</NuxtLink
                 >
               </li>
               <li>
-                <span
-                  class="transition-colors hover:text-zinc-300 cursor-default"
-                  >Data Infrastructure</span
+                <NuxtLink
+                  to="/#capabilities"
+                  class="transition-colors hover:text-zinc-300"
+                  >Data Infrastructure</NuxtLink
                 >
               </li>
             </ul>
@@ -326,7 +339,8 @@ onMounted(() => {
             Technology Ltd. All rights reserved.
           </p>
           <p class="text-xs text-zinc-700">
-            Registered in England &amp; Wales · Bristol, UK
+            Registered in England &amp; Wales · Company No. 10867809 · Bristol,
+            UK
           </p>
         </div>
       </div>

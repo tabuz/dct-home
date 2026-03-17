@@ -15,7 +15,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
 </script>
 
 <template>
-  <section class="py-24 lg:py-32">
+  <section id="case-studies" class="py-24 lg:py-32">
     <div class="mx-auto max-w-7xl px-6">
       <!-- Partner logos strip -->
       <div v-reveal class="mb-20 border-y border-zinc-800 py-10">
@@ -95,6 +95,18 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
             {{ item.body }}
           </p>
         </div>
+      </div>
+
+      <!-- Results CTA -->
+      <div v-reveal="240" class="mt-12 flex justify-center">
+        <UButton
+          to="#contact"
+          size="lg"
+          color="primary"
+          label="Get results like these — book a free discovery call"
+          trailing-icon="i-heroicons-arrow-right-16-solid"
+          class="transition-all duration-200 hover:brightness-110"
+        />
       </div>
     </div>
   </section>

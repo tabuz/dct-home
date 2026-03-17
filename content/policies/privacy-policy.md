@@ -13,7 +13,7 @@ description: Learn how Digital Construction Technology collects, uses, and prote
 
 ## 1. Who We Are
 
-Digital Construction Technology is a software engineering company registered in England and Wales. Our registered address is:
+Digital Construction Technology is a software engineering company registered in England and Wales (Company No. 10867809). Our registered address is:
 
 > DCT — Scrapstore House, 21 Sevier Street, Bristol, BS2 9LB, United Kingdom
 

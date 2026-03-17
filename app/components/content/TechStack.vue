@@ -15,12 +15,12 @@ const technologies = [
   // { title: "IBM Cloud", iconUrl: "https://cdn.simpleicons.org/ibm" },
   // { title: "Oracle Cloud", iconUrl: "https://cdn.simpleicons.org/oracle" },
   {
-    title: "Alibaba Cloud",
-    iconUrl: "https://cdn.simpleicons.org/alibabacloud",
+    title: "Microsoft Azure",
+    iconUrl: "https://cdn.simpleicons.org/microsoftazure",
   },
   {
-    title: "DigitalOcean",
-    iconUrl: "https://cdn.simpleicons.org/digitalocean",
+    title: "PostgreSQL",
+    iconUrl: "https://cdn.simpleicons.org/postgresql",
   },
   {
     title: "SAP",

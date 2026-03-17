@@ -10,6 +10,12 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   devtools: { enabled: false },
   compatibilityDate: "2024-04-03",
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/blog"],
+    },
+  },
   colorMode: {
     preference: "dark",
   },
