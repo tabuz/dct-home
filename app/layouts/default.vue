@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const mobileMenuOpen = ref(false);
 const scrolled = ref(false);
+const showStickyCta = ref(false);
 const route = useRoute();
 
 const navLinks = [
@@ -19,6 +20,7 @@ function isActive(path: string): boolean {
 onMounted(() => {
   const onScroll = () => {
     scrolled.value = window.scrollY > 20;
+    showStickyCta.value = window.scrollY > window.innerHeight * 0.85;
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onUnmounted(() => window.removeEventListener("scroll", onScroll));
@@ -169,6 +171,36 @@ onMounted(() => {
     <main class="pt-16">
       <slot />
     </main>
+
+    <!-- Sticky floating CTA bar -->
+    <Transition
+      enter-active-class="transition-all duration-300 ease-out"
+      enter-from-class="translate-y-full opacity-0"
+      enter-to-class="translate-y-0 opacity-100"
+      leave-active-class="transition-all duration-200 ease-in"
+      leave-from-class="translate-y-0 opacity-100"
+      leave-to-class="translate-y-full opacity-0"
+    >
+      <div
+        v-if="showStickyCta && route.path === '/'"
+        class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-800 bg-zinc-950/95 backdrop-blur-md"
+      >
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+          <p class="hidden text-sm text-zinc-400 sm:block">
+            <span class="font-semibold text-white">Ready to unlock your data?</span>
+            &nbsp;Book a free 30-minute discovery call.
+          </p>
+          <UButton
+            to="/#contact"
+            color="primary"
+            size="md"
+            label="Book Discovery Call"
+            trailing-icon="i-heroicons-arrow-right-16-solid"
+            class="w-full transition-all duration-200 hover:brightness-110 sm:w-auto"
+          />
+        </div>
+      </div>
+    </Transition>
 
     <!-- Footer -->
     <footer

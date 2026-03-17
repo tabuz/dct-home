@@ -5,6 +5,10 @@ defineProps<{
   cases: Array<{
     company: string;
     body: string;
+    metrics?: Array<{
+      value: string;
+      label: string;
+    }>;
   }>;
 }>();
 
@@ -45,10 +49,21 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
               class="h-20 w-auto object-contain brightness-200"
             />
           </div>
+          <!-- Carter Synergy -->
+          <div
+            class="opacity-70 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0"
+          >
+            <img
+              src="/logos/carter-synergy-logo.svg"
+              alt="Carter Synergy"
+              class="h-20 w-auto object-contain"
+            />
+          </div>
         </div>
       </div>
 
-      <div v-reveal="80" class="mb-16">
+      <!-- Hidden pending approval -->
+      <!-- <div v-reveal="80" class="mb-16">
         <div class="mb-4">
           <span
             class="inline-flex items-center gap-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-widest text-emerald-400"
@@ -91,13 +106,24 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
               </h3>
             </template>
           </div>
+        
+          <div v-if="item.metrics" class="mb-5 flex flex-wrap gap-3">
+            <div
+              v-for="(metric, mi) in item.metrics"
+              :key="mi"
+              class="flex items-center gap-2 rounded-lg border border-emerald-500/15 bg-emerald-500/5 px-3 py-2"
+            >
+              <span class="text-lg font-bold text-emerald-400">{{ metric.value }}</span>
+              <span class="text-xs text-zinc-400">{{ metric.label }}</span>
+            </div>
+          </div>
+
           <p class="text-sm leading-relaxed text-zinc-400">
             {{ item.body }}
           </p>
         </div>
       </div>
 
-      <!-- Results CTA -->
       <div v-reveal="240" class="mt-12 flex justify-center">
         <UButton
           to="#contact"
@@ -107,7 +133,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
           trailing-icon="i-heroicons-arrow-right-16-solid"
           class="transition-all duration-200 hover:brightness-110"
         />
-      </div>
+      </div> -->
     </div>
   </section>
 </template>

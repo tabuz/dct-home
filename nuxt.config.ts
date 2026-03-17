@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   studio: {
     repository: {
       provider: "github",
-      owner: "digicontech",
+      owner: "tabuz",
       repo: "dct-home",
     },
   },

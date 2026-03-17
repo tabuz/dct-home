@@ -6,6 +6,7 @@ defineProps<{
     number: string;
     title: string;
     body: string;
+    timeline?: string;
   }>;
 }>();
 </script>
@@ -84,6 +85,10 @@ defineProps<{
               </h3>
               <p class="mt-2 text-sm leading-relaxed text-zinc-400">
                 {{ step.body }}
+              </p>
+              <p v-if="step.timeline" class="mt-3 flex items-center gap-1.5 text-xs font-medium text-emerald-400">
+                <UIcon name="i-heroicons-clock" class="text-sm" />
+                {{ step.timeline }}
               </p>
             </div>
           </div>

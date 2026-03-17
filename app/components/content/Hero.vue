@@ -53,8 +53,30 @@ defineProps<{
       >
         {{ subheadline }}
       </p>
+
+      <!-- Urgency micro-copy -->
       <div
-        class="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up"
+        class="mt-6 flex items-center justify-center gap-6 text-sm text-zinc-500 animate-fade-up"
+        style="animation-delay: 310ms"
+      >
+        <span class="flex items-center gap-1.5">
+          <UIcon name="i-heroicons-shield-check" class="text-emerald-500" />
+          No disruption
+        </span>
+        <span class="h-3 w-px bg-zinc-700" />
+        <span class="flex items-center gap-1.5">
+          <UIcon name="i-heroicons-lock-closed" class="text-emerald-500" />
+          Core ERP untouched
+        </span>
+        <span class="h-3 w-px bg-zinc-700 hidden sm:block" />
+        <span class="hidden sm:flex items-center gap-1.5">
+          <UIcon name="i-heroicons-bolt" class="text-emerald-500" />
+          Live in weeks
+        </span>
+      </div>
+
+      <div
+        class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up"
         style="animation-delay: 380ms"
       >
         <UButton
@@ -89,7 +111,7 @@ defineProps<{
           :key="stat.label"
           class="flex flex-col items-center gap-1 bg-zinc-900 px-6 py-5 text-center"
         >
-          <span class="text-xl font-bold text-white">{{ stat.value }}</span>
+          <span class="text-2xl font-bold text-emerald-400">{{ stat.value }}</span>
           <span class="text-xs text-zinc-500">{{ stat.label }}</span>
         </div>
       </div>
