@@ -9,13 +9,13 @@ buttonLink: "#contact"
 buttonText: Book a Free Discovery Call
 headline: Engineering Intelligence Into the Built Environment.
 subheadline: We architect AI-native workflows and headless ERP integrations for
-  the UK's most demanding construction supply chains — delivering modern
-  velocity without the risk of replacing your core transactional engine.
+  the UK's most demanding construction supply chains. Delivering modern velocity
+  without the risk of replacing your core transactional engine.
 ---
 ::
 
 ::problem{headline="Liberating the Data Prison."}
-The UK construction supply chain runs on highly complex, on-premise ERP systems. These platforms are formidable financial ledgers — but rigid data prisons for your sales, commercial, and operations teams.
+The UK construction supply chain runs on highly complex, on-premise ERP systems. These platforms are formidable financial ledgers but rigid data prisons for your sales, commercial, and operations teams.
 
 Generic technology agencies will tell you to abandon them. We know better.
 
