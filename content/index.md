@@ -1,24 +1,114 @@
-# Welcome to Nuxt Content Starter
+---
+title: DCT — Elite Engineering for the Built Environment
+description: We architect AI-native workflows and headless ERP integrations for the UK's most demanding construction supply chains.
+---
 
-This is the main page displaying Markdown located at [content/index.md](https://github.com/nuxt/starter/blob/content/content/index.md).
-
-Move to [about](/about) page.
-
-## Manage your Contents
-
-Create new pages or modify the existing ones in `content/` directory.
-
-## Query & Render Pages
-
-You can find an example of querying contents and rendering them in a [catch-all page](https://github.com/nuxt/starter/blob/content/app/pages/%5B...slug%5D.vue)
-
-## Integrate Vue Component
-
-::alert{color="green"}
-The current [alert](https://github.com/nuxt/starter/blob/content/app/components/Alert.vue) and the [counter](https://github.com/nuxt/starter/blob/content/app/components/Counter.vue) below are `Vue` components integrated into the Markdown.
+::hero
+---
+headline: Engineering Intelligence Into the Built Environment.
+subheadline: "We architect AI-native workflows and headless ERP integrations for the UK's most demanding construction supply chains — delivering modern velocity without the risk of replacing your core transactional engine."
+buttonText: Book a Discovery Call
+buttonLink: "#contact"
+---
 ::
 
-::counter
+::problem
+---
+headline: Liberating the Data Prison.
+---
+The UK construction supply chain runs on highly complex, on-premise ERP systems. These platforms are formidable financial ledgers — but rigid data prisons for your sales, commercial, and operations teams.
+
+Generic technology agencies will tell you to abandon them. We know better.
+
+You need digital innovation, but you cannot afford the operational disruption of replacing your core transactional engine. You need an engineering partner who understands how to securely extract that data and put it to work — without ever breaking what already works.
 ::
 
-Checkout out the [documentation](https://content.nuxt.com/docs/getting-started) to learn more.
+::tech-stack
+::
+
+::capabilities
+---
+headline: Built for Complexity. Engineered to Last.
+pillars:
+  - title: Headless ERP Architecture
+    icon: i-heroicons-server-stack
+    body: "We don't compete with your ledger — we build the intelligence layer that surrounds it. Using Google Cloud Platform, we deploy middleware to natively extract and link data from legacy environments, creating secure, high-speed APIs and modern data infrastructure without disrupting your core business."
+  - title: Office-Native Integrations
+    icon: i-heroicons-inbox-arrow-down
+    body: "Software adoption fails when it forces new habits. We build solutions that live exactly where your team already works — inside their inbox. Custom Email Sidecars, Bots, and Adaptive Cards surface live commercial data, credit limits, and stock levels directly inside Microsoft 365 and Google Workspace."
+  - title: "Field-First Apps & AI Orchestration"
+    icon: i-heroicons-device-phone-mobile
+    body: "Construction happens in the field, not at a desk. We build for that reality — from offline-first Progressive Web Apps to voice-activated Car Park Mode powered by Google Vertex AI and Chirp. Spoken site notes become structured, automated data without anyone touching a keyboard."
+---
+::
+
+::process
+---
+headline: From First Call to Live Deployment.
+subheadline: "A low-risk, transparent engagement model built around your infrastructure — not against it. No surprises, no disruptions, no failed change programmes."
+steps:
+  - number: "01"
+    title: Discovery Call
+    body: "We start by listening. In a focused 30-minute call, you walk us through your systems, your frustrations, and your commercial goals. No pitch deck, no obligation."
+  - number: "02"
+    title: Architecture Design
+    body: "Our engineers design a tailored solution around your existing stack. We map exactly what gets built, how your data will flow, and — critically — what will never be touched."
+  - number: "03"
+    title: Engineered Delivery
+    body: "We build inside your infrastructure. No forced migrations, no new platforms imposed on your team. Production-grade software, tested end-to-end and deployed by specialists."
+  - number: "04"
+    title: Long-Term Partnership
+    body: "We become your embedded engineering partner. As your commercial needs evolve, we iterate alongside you — ensuring your digital infrastructure compounds in value over time."
+---
+::
+
+::social-proof
+---
+headline: The Digital Spine for Industry Giants.
+subheadline: Trusted by some of the UK's most complex construction businesses, we modernise legacy infrastructure and engineer the operational workflows that drive real competitive advantage.
+cases:
+  - company: Travis Perkins plc
+    body: "Engineered the bespoke SalesHub ecosystem — migrating decades of legacy quote and order data into a modern PostgreSQL architecture. Deployed offline-first Progressive Web Apps to hundreds of external field representatives, enabling them to quote, order, and access live commercial data entirely without network connectivity. Teams that previously depended on back-office support now operate autonomously in the field."
+  - company: Pam Building
+    body: "Designed and built a custom Commercial Engine to automate complex rebate logic that had required laborious manual processing. The system handles distributor claimbacks end-to-end and delivers 24/7 self-service customer portals integrated directly with SAP — eliminating reconciliation delays and recovering significant finance team overhead every period."
+---
+::
+
+::cta
+---
+headline: Ready to put your data to work?
+buttonText: Book a Discovery Call
+buttonLink: "#contact"
+---
+Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field — we have the specialised engineering expertise to deliver it without disrupting your core operations. Most engagements start with a 30-minute call.
+::
+
+::latest-posts
+---
+headline: Engineering Intelligence, Shared Openly.
+subheadline: "Perspectives on headless ERP architecture, AI orchestration, and the future of construction technology — from the team building it."
+---
+::
+
+::faq
+---
+headline: Questions Worth Asking.
+subheadline: "We work on complex infrastructure in mission-critical environments. Here's what every serious prospect deserves to know before picking up the phone."
+items:
+  - question: "Do you replace our ERP system?"
+    answer: "Never. Our entire model is built around protecting your core transactional engine. We build the intelligence and integration layer that surrounds your ERP — extracting, linking, and surfacing data through modern APIs and applications, without touching the ledger your business runs on. That's not a constraint; it's our core competency."
+  - question: "Which ERP systems do you support?"
+    answer: "We have deep experience with SAP, Kerridge (K8/Autopart), Epicor, and custom legacy platforms common in the UK construction supply chain. Our middleware architecture is system-agnostic — if it stores business-critical data, we have an approach to surface it safely."
+  - question: "How long does a typical engagement take?"
+    answer: "It depends on scope and complexity. A targeted Microsoft 365 integration or email sidecar can go live in 6–8 weeks. A full data infrastructure project with field applications and AI orchestration typically spans 3–6 months. We'll give you a realistic, milestone-based timeline in the architecture proposal — not a sales estimate."
+  - question: "Do we need a large internal IT team?"
+    answer: "No. Many of our clients have lean IT functions. We operate as your embedded engineering partner, managing everything from architecture through deployment and ongoing support. We work alongside whoever you have internally — whether that's one person or a full team."
+  - question: "How do you handle data security and access control?"
+    answer: "All solutions are built on Google Cloud Platform with role-based access controls, encrypted data pipelines, and audit logging as baseline non-negotiables. We never require or store raw ERP credentials in external systems. Data flows exclusively through secure middleware we architect, own, and maintain."
+  - question: "What kind of business is this the right fit for?"
+    answer: "We work exclusively with large, established UK construction businesses — typically £50M+ revenue with complex ERP infrastructure and genuine operational pain. Our work isn't a good fit for early-stage companies or off-the-shelf software rollouts. If you're operating at enterprise scale with systems that demand specialist engineering attention, we want to hear from you."
+---
+::
+
+::contact
+::
