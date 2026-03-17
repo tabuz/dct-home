@@ -1,6 +1,19 @@
 <script setup lang="ts">
 const mobileMenuOpen = ref(false);
 const scrolled = ref(false);
+const route = useRoute();
+
+const navLinks = [
+  { label: "Home", path: "/" },
+  { label: "Services", path: "/#capabilities" },
+  { label: "Blog", path: "/blog" },
+];
+
+function isActive(path: string): boolean {
+  if (path === "/") return route.path === "/";
+  const base = path.split("#")[0];
+  return base !== "/" && !!base && route.path.startsWith(base);
+}
 
 onMounted(() => {
   const onScroll = () => {
@@ -18,10 +31,15 @@ onMounted(() => {
       class="fixed top-0 left-0 right-0 z-50 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur-md transition-shadow duration-300"
       :class="scrolled ? 'shadow-xl shadow-zinc-950/60' : ''"
     >
+      <!-- Top emerald accent line -->
+      <div
+        class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-emerald-500/50 to-transparent"
+      />
+
       <div
         class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6"
       >
-        <!-- Logo -->
+        <!-- Logo + wordmark -->
         <NuxtLink
           to="/"
           class="group flex items-center gap-3 transition-opacity hover:opacity-80"
@@ -30,21 +48,46 @@ onMounted(() => {
           <img
             src="/logos/logo_dct.png"
             alt="Digital Construction Technology"
-            class="h-8 w-auto"
+            class="h-7 w-auto"
             style="filter: brightness(0) invert(1)"
           />
+          <!-- <div class="hidden flex-col lg:flex">
+            <span
+              class="text-[11px] font-bold uppercase tracking-[0.18em] text-white leading-none"
+              >Digital Construction Technology</span
+            >
+            <span
+              class="mt-1 text-[10px] tracking-widest text-emerald-500/70 leading-none"
+              >Engineering Intelligence</span
+            >
+          </div> -->
         </NuxtLink>
 
         <!-- Desktop nav -->
-        <div class="hidden items-center gap-1 sm:flex">
-          <UButton to="/" variant="ghost" color="neutral" label="Home" />
-          <UButton
-            to="/#capabilities"
-            variant="ghost"
-            color="neutral"
-            label="Services"
-          />
-          <UButton to="/blog" variant="ghost" color="neutral" label="Blog" />
+        <div class="hidden items-center gap-0.5 sm:flex">
+          <!-- Nav links -->
+          <NuxtLink
+            v-for="item in navLinks"
+            :key="item.path"
+            :to="item.path"
+            class="relative flex items-center rounded-md px-3 py-1.5 text-sm font-medium transition-colors duration-150"
+            :class="
+              isActive(item.path)
+                ? 'text-white'
+                : 'text-zinc-400 hover:text-zinc-100'
+            "
+          >
+            {{ item.label }}
+            <!-- Active underline -->
+            <span
+              v-if="isActive(item.path)"
+              class="absolute bottom-0 inset-x-3 h-px rounded-full bg-emerald-500"
+            />
+          </NuxtLink>
+
+          <!-- Separator -->
+          <div class="mx-3 h-4 w-px bg-zinc-700" />
+
           <UButton
             to="/#contact"
             color="primary"

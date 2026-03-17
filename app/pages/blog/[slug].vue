@@ -92,9 +92,9 @@ useSeoMeta({
         Back to Blog
       </NuxtLink>
 
-      <div class="flex gap-16 xl:gap-24">
+      <div class="flex gap-16 xl:gap-20 xl:justify-center">
         <!-- ── Main content column ── -->
-        <article class="min-w-0 flex-1">
+        <article class="min-w-0 w-full max-w-2xl">
           <!-- Post header -->
           <header class="mb-12">
             <div class="mb-4 flex flex-wrap items-center gap-3">
