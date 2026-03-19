@@ -101,7 +101,7 @@ defineProps<{
       </div>
 
       <!-- Trust strip -->
-      <div
+      <!-- <div
         v-if="stats && stats.length > 0"
         class="mt-16 grid gap-px overflow-hidden rounded-xl border border-zinc-800 bg-zinc-800 animate-fade-up"
         :class="{
@@ -122,7 +122,7 @@ defineProps<{
           }}</span>
           <span class="text-xs text-zinc-500">{{ stat.label }}</span>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
