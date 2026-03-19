@@ -5,12 +5,29 @@ description: We architect AI-native workflows and headless ERP integrations for 
 
 ::hero
 ---
+stats:
+  - value: £2B+
+    label: Client Revenue Managed
+  - value: 500+
+    label: Field Users Powered
+  - value: Zero
+    label: ERP Disruptions
+  - value: 100%
+    label: UK Construction Focus
+trustIndicators:
+  - icon: i-heroicons-shield-check
+    text: No disruption
+  - icon: i-heroicons-lock-closed
+    text: Core ERP untouched
+  - icon: i-heroicons-bolt
+    text: Live in weeks
+badgeText: Trusted by FTSE 250 Construction Leaders
 buttonLink: "#contact"
-buttonText: Book a Free Discovery Call
+buttonText: Let's Talk
 headline: Engineering Intelligence Into the Built Environment.
 subheadline: We architect AI-native workflows and headless ERP integrations for
-  the UK's most demanding construction supply chains — delivering modern
-  velocity without the risk of replacing your core transactional engine.
+  the UK's most demanding construction supply chains. Delivering modern velocity
+  without the risk of replacing your core transactional engine.
 ---
 ::
 
@@ -19,7 +36,7 @@ The UK construction supply chain runs on highly complex, on-premise ERP systems.
 
 Generic technology agencies will tell you to abandon them. We know better.
 
-You need digital innovation, but you cannot afford the operational disruption of replacing your core transactional engine. You need an engineering partner who understands how to securely extract that data and put it to work — without ever breaking what already works.
+You need digital innovation, but you cannot afford the operational disruption of replacing your core transactional engine. You need an engineering partner who understands how to securely extract that data and put it to work.
 ::
 
 :tech-stack
@@ -30,16 +47,16 @@ pillars:
   - title: Headless ERP Architecture
     icon: i-heroicons-server-stack
     outcome: Unlock trapped data without ERP risk
-    body: We don't compete with your ledger — we build the intelligence layer that
+    body: We don't compete with your ledger. We build the intelligence layer that
       surrounds it. Using Google Cloud Platform, we deploy middleware to
       natively extract and link data from legacy environments, creating secure,
       high-speed APIs and modern data infrastructure without disrupting your
       core business.
   - title: Office-Native Integrations
     icon: i-heroicons-inbox-arrow-down
-    outcome: 80% faster adoption — zero new tools to learn
+    outcome: Faster adoption — zero new tools to learn
     body: Software adoption fails when it forces new habits. We build solutions that
-      live exactly where your team already works — inside their inbox. Custom
+      live exactly where your team already works. Inside their inbox. Custom
       Email Sidecars, Bots, and Adaptive Cards surface live commercial data,
       credit limits, and stock levels directly inside Microsoft 365 and Google
       Workspace.
@@ -47,7 +64,7 @@ pillars:
     icon: i-heroicons-device-phone-mobile
     outcome: Capture data at the point of work — even offline
     body: Construction happens in the field, not at a desk. We build for that
-      reality — from offline-first Progressive Web Apps to voice-activated Car
+      reality. From offline-first Progressive Web Apps to voice-activated Car
       Park Mode powered by Google Vertex AI and Chirp. Spoken site notes become
       structured, automated data without anyone touching a keyboard.
 headline: Built for Complexity. Engineered to Last.
@@ -58,33 +75,31 @@ headline: Built for Complexity. Engineered to Last.
 ---
 steps:
   - number: "01"
-    title: Discovery Call
-    timeline: 30 minutes
-    body: We start by listening. In a focused 30-minute call, you walk us through
-      your systems, your frustrations, and your commercial goals. No pitch deck,
-      no obligation.
+    title: Listen
+    timeline: hours
+    body: We start by listening. You walk us through your systems, your
+      frustrations, and your commercial goals. No pitch deck, no obligation.
   - number: "02"
-    title: Architecture Design
-    timeline: 1–2 weeks
+    title: Design
+    timeline: weeks
     body: Our engineers design a tailored solution around your existing stack. We
       map exactly what gets built, how your data will flow, and — critically —
       what will never be touched.
   - number: "03"
-    title: Engineered Delivery
-    timeline: 6–12 weeks typical
-    body: We build inside your infrastructure. No forced migrations, no new
-      platforms imposed on your team. Production-grade software, tested
-      end-to-end and deployed by specialists.
+    title: Deliver
+    timeline: months
+    body: We build in collabortion with you. No forced migrations, no new platforms
+      imposed on your team. Production-grade software, tested end-to-end and
+      deployed by specialists.
   - number: "04"
     title: Long-Term Partnership
-    timeline: Ongoing evolution
+    timeline: Years
     body: We become your embedded engineering partner. As your commercial needs
       evolve, we iterate alongside you — ensuring your digital infrastructure
       compounds in value over time.
 headline: From First Call to Live Deployment.
-subheadline: A low-risk, transparent engagement model built around your
-  infrastructure — not against it. No surprises, no disruptions, no failed
-  change programmes.
+subheadline: A low-risk, transparent engagement model. No surprises, no
+  disruptions, no failed change programmes.
 ---
 ::
 
@@ -131,10 +146,10 @@ buttonLink: "#contact"
 buttonText: Book Your Free Discovery Call
 headline: Ready to put your data to work?
 ---
-Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field — we have the specialised engineering expertise to deliver it without disrupting your core operations.
+Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field. We have the specialised engineering expertise to deliver it without disrupting your core operations.
 ::
 
-:latest-posts{headline="Engineering Intelligence, Shared Openly." subheadline="Perspectives on headless ERP architecture, AI orchestration, and the future of construction technology — from the team building it."}
+<!-- :latest-posts{headline="Engineering Intelligence, Shared Openly." subheadline="Perspectives on headless ERP architecture, AI orchestration, and the future of construction technology — from the team building it."} -->
 
 ::faq
 ---

@@ -192,13 +192,12 @@ onMounted(() => {
             <span class="font-semibold text-white"
               >Ready to unlock your data?</span
             >
-            &nbsp;Book a free 30-minute discovery call.
           </p>
           <UButton
             to="/#contact"
             color="primary"
             size="md"
-            label="Book Discovery Call"
+            label="Let's talk"
             trailing-icon="i-heroicons-arrow-right-16-solid"
             class="w-full transition-all duration-200 hover:brightness-110 sm:w-auto"
           />

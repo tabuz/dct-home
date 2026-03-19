@@ -38,37 +38,6 @@ defineProps<{
           </div>
 
           <!-- Quantified pain strip (mobile + desktop) -->
-          <div class="mt-8 grid grid-cols-3 gap-3">
-            <div
-              v-for="pain in [
-                {
-                  value: '72%',
-                  label:
-                    'of construction firms still run manual sales workflows',
-                },
-                {
-                  value: '£300K+',
-                  label:
-                    'lost annually to data re-keying and reconciliation errors',
-                },
-                {
-                  value: '3–5 days',
-                  label:
-                    'average delay from quote request to customer response',
-                },
-              ]"
-              :key="pain.label"
-              class="rounded-lg border border-zinc-800 bg-zinc-900/50 px-4 py-3 text-center"
-            >
-              <span class="block text-lg font-bold text-white sm:text-xl">{{
-                pain.value
-              }}</span>
-              <span
-                class="mt-1 block text-[10px] leading-tight text-zinc-500 sm:text-xs"
-                >{{ pain.label }}</span
-              >
-            </div>
-          </div>
         </div>
 
         <!-- Right: terminal decoration (desktop only) -->

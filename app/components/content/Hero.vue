@@ -44,7 +44,7 @@ defineProps<{
         <span
           class="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-dot-pulse"
         />
-        {{ badgeText || "Trusted by FTSE 100 Construction Leaders" }}
+        {{ badgeText || "Trusted by FTSE 250 Construction Leaders" }}
       </div>
       <h1
         class="bg-linear-to-b from-white to-zinc-400 bg-clip-text text-5xl font-bold leading-[1.1] tracking-tight text-transparent sm:text-7xl animate-fade-up"

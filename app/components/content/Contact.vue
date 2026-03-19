@@ -50,41 +50,13 @@ async function submit() {
           <h2
             class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl"
           >
-            Let's talk about your project.
+            Let's talk.
           </h2>
           <p class="mt-6 text-lg leading-relaxed text-zinc-400">
             Whether you need to unlock a legacy ERP, build a Microsoft 365
             integration, or deploy an AI-driven field application — we'd love to
             hear about the challenge.
           </p>
-
-          <!-- Response time promise -->
-          <div
-            class="mt-8 flex items-center gap-3 rounded-lg border border-emerald-500/20 bg-emerald-500/5 px-4 py-3"
-          >
-            <UIcon
-              name="i-heroicons-clock"
-              class="shrink-0 text-lg text-emerald-400"
-            />
-            <p class="text-sm text-zinc-300">
-              <span class="font-semibold text-white"
-                >We respond within 24 hours.</span
-              >
-              Most discovery calls are booked within the same week.
-            </p>
-          </div>
-
-          <!-- Social proof near form -->
-          <div class="mt-6 flex items-start gap-3 text-sm text-zinc-500">
-            <UIcon
-              name="i-heroicons-shield-check"
-              class="mt-0.5 shrink-0 text-emerald-400"
-            />
-            <p>
-              Trusted by Travis Perkins plc, Pam Building, and other UK
-              construction leaders with £50M+ revenue.
-            </p>
-          </div>
 
           <dl class="mt-10 space-y-5 text-sm">
             <div class="flex items-start gap-3">
@@ -299,15 +271,10 @@ async function submit() {
               size="lg"
               :loading="state === 'loading'"
               :disabled="!form.name || !form.email || !form.message"
-              label="Book Your Free Discovery Call"
+              label="Submit"
               trailing-icon="i-heroicons-paper-airplane"
               class="w-full justify-center"
             />
-
-            <!-- Risk reversal -->
-            <p class="text-center text-xs text-zinc-500">
-              No obligation · No pitch deck · 30-minute focused conversation
-            </p>
 
             <p class="text-center text-xs text-zinc-600">
               By submitting this form you agree to our

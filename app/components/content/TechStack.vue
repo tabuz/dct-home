@@ -12,8 +12,6 @@ const technologies = [
     title: "Google Cloud",
     iconUrl: "https://cdn.simpleicons.org/googlecloud",
   },
-  // { title: "IBM Cloud", iconUrl: "https://cdn.simpleicons.org/ibm" },
-  // { title: "Oracle Cloud", iconUrl: "https://cdn.simpleicons.org/oracle" },
   {
     title: "Microsoft Azure",
     iconUrl: "https://cdn.simpleicons.org/microsoftazure",
@@ -33,7 +31,6 @@ const technologies = [
   { title: "Snowflake", iconUrl: "https://cdn.simpleicons.org/snowflake" },
   { title: "Datadog", iconUrl: "https://cdn.simpleicons.org/datadog" },
   { title: "Red Hat", iconUrl: "https://cdn.simpleicons.org/redhat" },
-  // { title: "Heroku", iconUrl: "https://cdn.simpleicons.org/heroku" },
 ];
 </script>
 
@@ -59,7 +56,7 @@ const technologies = [
         v-reveal="160"
         class="mx-auto mt-6 max-w-2xl text-center text-base leading-relaxed text-zinc-400 sm:text-lg"
       >
-        We engineer solutions around the infrastructure you have — not the
+        We engineer solutions around the infrastructure you have. Not the
         infrastructure we prefer. Whatever ERP, cloud platform, or development
         environment you've inherited, we have a proven path forward.
       </p>
