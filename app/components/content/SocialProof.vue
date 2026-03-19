@@ -11,11 +11,6 @@ defineProps<{
     }>;
   }>;
 }>();
-
-const logos: Record<string, { src: string; invert?: boolean }> = {
-  "Travis Perkins plc": { src: "/logos/travis-perkins-plc-logo.png" },
-  "Pam Building": { src: "/logos/pam-building-logo.png", invert: true },
-};
 </script>
 
 <template>
@@ -38,7 +33,10 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
         </p>
         <div class="flex flex-wrap items-center justify-center gap-16">
           <!-- Travis Perkins plc -->
-          <div
+          <a
+            href="https://www.travisperkinsplc.co.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="opacity-70 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0"
           >
             <img
@@ -46,9 +44,12 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
               alt="Travis Perkins plc"
               class="h-38 w-auto object-contain"
             />
-          </div>
+          </a>
           <!-- Pam Building -->
-          <div
+          <a
+            href="https://www.pambuilding.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="opacity-70 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0"
           >
             <img
@@ -56,9 +57,12 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
               alt="Pam Building"
               class="h-18 w-auto object-contain brightness-200"
             />
-          </div>
+          </a>
           <!-- Carter Synergy -->
-          <div
+          <a
+            href="https://cartersynergy.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="opacity-70 grayscale transition-all duration-200 hover:opacity-100 hover:grayscale-0"
           >
             <img
@@ -66,7 +70,7 @@ const logos: Record<string, { src: string; invert?: boolean }> = {
               alt="Carter Synergy"
               class="h-12 w-auto object-contain"
             />
-          </div>
+          </a>
         </div>
       </div>
 

@@ -143,7 +143,7 @@ subheadline: Trusted by some of the UK's most complex construction businesses,
 ::cta
 ---
 buttonLink: "#contact"
-buttonText: Book Your Free Discovery Call
+buttonText: Let's Talk
 headline: Ready to put your data to work?
 ---
 Whether you're locked inside a legacy ERP, losing commercial insight to manual reconciliations, or ready to put AI to work in the field. We have the specialised engineering expertise to deliver it without disrupting your core operations.

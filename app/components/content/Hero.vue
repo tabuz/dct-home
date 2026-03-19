@@ -87,7 +87,7 @@ defineProps<{
           :to="buttonLink"
           size="xl"
           color="primary"
-          class="transition-all duration-200 hover:brightness-110"
+          class="transition-all duration-200 hover:brightness-110 px-8"
         />
         <UButton
           v-if="secondaryButtonText"

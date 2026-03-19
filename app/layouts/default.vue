@@ -8,7 +8,7 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "Services", path: "/#capabilities" },
   { label: "Case Studies", path: "/#case-studies" },
-  { label: "Blog", path: "/blog" },
+  // { label: "Blog", path: "/blog" },
 ];
 
 function isActive(path: string): boolean {
@@ -148,13 +148,13 @@ onMounted(() => {
             >
               Case Studies
             </NuxtLink>
-            <NuxtLink
+            <!-- <NuxtLink
               to="/blog"
               class="rounded-lg px-3 py-2.5 text-sm font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:text-white"
               @click="mobileMenuOpen = false"
             >
               Blog
-            </NuxtLink>
+            </NuxtLink> -->
             <NuxtLink
               to="/#contact"
               class="mt-2 rounded-lg bg-emerald-600 px-3 py-2.5 text-center text-sm font-medium text-white transition-colors hover:bg-emerald-500"
@@ -183,7 +183,7 @@ onMounted(() => {
     >
       <div
         v-if="showStickyCta && route.path === '/'"
-        class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-800 bg-zinc-950/95 backdrop-blur-md"
+        class="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-800 bg-zinc-950/95 backdrop-blur-md hidden lg:block"
       >
         <div
           class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3"
@@ -329,14 +329,14 @@ onMounted(() => {
               Company
             </h3>
             <ul class="space-y-2.5 text-sm">
-              <li>
+              <!-- <li>
                 <NuxtLink
                   to="/blog"
                   class="text-zinc-500 transition-colors hover:text-zinc-300"
                 >
                   Blog
                 </NuxtLink>
-              </li>
+              </li> -->
               <li>
                 <NuxtLink
                   to="/#contact"

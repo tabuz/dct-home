@@ -69,7 +69,10 @@ defineProps<{
           </div>
           <span class="hidden h-3 w-px bg-zinc-700 sm:block" />
           <div class="flex items-center gap-2 text-sm text-zinc-500">
-            <UIcon name="i-heroicons-handshake" class="text-emerald-500" />
+            <UIcon
+              name="i-heroicons-user-group-20-solid"
+              class="text-emerald-500"
+            />
             <span>Real partnership</span>
           </div>
           <span class="hidden h-3 w-px bg-zinc-700 sm:block" />
@@ -85,7 +88,7 @@ defineProps<{
             :to="buttonLink"
             size="xl"
             color="primary"
-            class="transition-all duration-200 hover:brightness-110"
+            class="transition-all duration-200 hover:brightness-110 px-8"
           />
         </div>
       </div>

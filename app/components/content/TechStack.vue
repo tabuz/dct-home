@@ -14,7 +14,8 @@ const technologies = [
   },
   {
     title: "Microsoft Azure",
-    iconUrl: "https://cdn.simpleicons.org/microsoftazure",
+    iconUrl:
+      "https://az-icons.com/export/icons/6ae48fcbb84214de68fcba2540913934.svg",
   },
   {
     title: "PostgreSQL",
