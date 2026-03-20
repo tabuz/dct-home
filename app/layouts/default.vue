@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { trackCtaClick } from "~/composables/useTracking";
+
 const mobileMenuOpen = ref(false);
 const scrolled = ref(false);
 const showStickyCta = ref(false);
@@ -97,6 +99,7 @@ onMounted(() => {
             variant="solid"
             label="Get in Touch"
             trailing-icon="i-heroicons-arrow-right-16-solid"
+            @click="trackCtaClick('Get in Touch', 'nav')"
           />
         </div>
 
@@ -200,6 +203,7 @@ onMounted(() => {
             label="Let's talk"
             trailing-icon="i-heroicons-arrow-right-16-solid"
             class="w-full transition-all duration-200 hover:brightness-110 sm:w-auto"
+            @click="trackCtaClick('Lets talk', 'sticky_bar')"
           />
         </div>
       </div>
@@ -220,6 +224,8 @@ onMounted(() => {
                 src="/logos/logo_dct.png"
                 alt="Digital Construction Technology"
                 class="h-9 w-auto"
+                width="169"
+                height="36"
                 style="filter: brightness(0) invert(1)"
                 itemprop="logo"
               />
@@ -233,7 +239,7 @@ onMounted(() => {
               the UK's most demanding construction supply chains.
             </p>
             <address
-              class="mt-5 not-italic text-sm text-zinc-500 leading-relaxed"
+              class="mt-5 not-italic text-sm text-zinc-400 leading-relaxed"
               itemprop="address"
               itemscope
               itemtype="https://schema.org/PostalAddress"
@@ -282,7 +288,7 @@ onMounted(() => {
             >
               Services
             </h3>
-            <ul class="space-y-2.5 text-sm text-zinc-500">
+            <ul class="space-y-2.5 text-sm text-zinc-400">
               <li>
                 <NuxtLink
                   to="/#capabilities"
@@ -340,7 +346,7 @@ onMounted(() => {
               <li>
                 <NuxtLink
                   to="/#contact"
-                  class="text-zinc-500 transition-colors hover:text-zinc-300"
+                  class="text-zinc-400 transition-colors hover:text-zinc-300"
                 >
                   Contact Us
                 </NuxtLink>
@@ -348,7 +354,7 @@ onMounted(() => {
               <li>
                 <NuxtLink
                   to="/policies/privacy-policy"
-                  class="text-zinc-500 transition-colors hover:text-zinc-300"
+                  class="text-zinc-400 transition-colors hover:text-zinc-300"
                 >
                   Privacy Policy
                 </NuxtLink>
@@ -356,7 +362,7 @@ onMounted(() => {
               <li>
                 <NuxtLink
                   to="/policies/terms-and-conditions"
-                  class="text-zinc-500 transition-colors hover:text-zinc-300"
+                  class="text-zinc-400 transition-colors hover:text-zinc-300"
                 >
                   Terms &amp; Conditions
                 </NuxtLink>
@@ -369,11 +375,11 @@ onMounted(() => {
         <div
           class="mt-12 flex flex-col items-start justify-between gap-4 border-t border-zinc-800 pt-8 sm:flex-row sm:items-center"
         >
-          <p class="text-xs text-zinc-600">
+          <p class="text-xs text-zinc-500">
             &copy; {{ new Date().getFullYear() }} Digital Construction
             Technology Ltd. All rights reserved.
           </p>
-          <p class="text-xs text-zinc-700">
+          <p class="text-xs text-zinc-500">
             Registered in England &amp; Wales · Company No. 10867809 · Bristol,
             UK
           </p>

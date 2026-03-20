@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { trackCtaClick } from "~/composables/useTracking";
+
 defineProps<{
   heading: string;
   body: string;
@@ -56,6 +58,7 @@ defineProps<{
           :label="buttonText"
           trailing-icon="i-heroicons-arrow-right-16-solid"
           class="transition-all duration-200 hover:brightness-110"
+          @click="trackCtaClick(buttonText, 'blog_cta')"
         />
       </div>
     </div>

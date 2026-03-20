@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import {
+  trackCtaClick,
+  trackFormStart,
+  trackFormFieldInteract,
+  trackFormSubmit,
+  trackFormAbandon,
+} from "~/composables/useTracking";
+
 const form = reactive({
   name: "",
   email: "",
@@ -9,6 +17,17 @@ const form = reactive({
 
 const state = ref<"idle" | "loading" | "success" | "error">("idle");
 const errorMessage = ref("");
+const formStarted = ref(false);
+const lastField = ref("");
+
+function onFieldFocus(fieldName: string) {
+  if (!formStarted.value) {
+    formStarted.value = true;
+    trackFormStart();
+  }
+  lastField.value = fieldName;
+  trackFormFieldInteract(fieldName);
+}
 
 async function submit() {
   state.value = "loading";
@@ -26,6 +45,8 @@ async function submit() {
       },
     });
     state.value = "success";
+    formStarted.value = false;
+    trackFormSubmit();
   } catch (err: unknown) {
     state.value = "error";
     errorMessage.value =
@@ -33,6 +54,22 @@ async function submit() {
       "Something went wrong. Please try again or email us directly.";
   }
 }
+
+onMounted(() => {
+  const handleVisibilityChange = () => {
+    if (
+      document.visibilityState === "hidden" &&
+      formStarted.value &&
+      state.value !== "success"
+    ) {
+      trackFormAbandon(lastField.value);
+    }
+  };
+  document.addEventListener("visibilitychange", handleVisibilityChange);
+  onUnmounted(() => {
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
+  });
+});
 </script>
 
 <template>
@@ -63,36 +100,34 @@ async function submit() {
               <UIcon
                 name="i-heroicons-envelope"
                 class="mt-0.5 shrink-0 text-lg text-emerald-400"
+                aria-hidden="true"
               />
-              <div>
-                <dt class="text-xs uppercase tracking-widest text-zinc-500">
-                  Email
-                </dt>
-                <dd>
-                  <a
-                    href="mailto:hello@digitalconstruction.technology"
-                    class="text-zinc-300 transition-colors hover:text-emerald-400"
-                  >
-                    hello@digitalconstruction.technology
-                  </a>
-                </dd>
-              </div>
+              <dt class="text-xs uppercase tracking-widest text-zinc-500">
+                Email
+              </dt>
+              <dd>
+                <a
+                  href="mailto:hello@digitalconstruction.technology"
+                  class="text-zinc-300 transition-colors hover:text-emerald-400"
+                >
+                  hello@digitalconstruction.technology
+                </a>
+              </dd>
             </div>
             <div class="flex items-start gap-3">
               <UIcon
                 name="i-heroicons-map-pin"
                 class="mt-0.5 shrink-0 text-lg text-emerald-400"
+                aria-hidden="true"
               />
-              <div>
-                <dt class="text-xs uppercase tracking-widest text-zinc-500">
-                  Office
-                </dt>
-                <dd class="text-zinc-300 leading-relaxed">
-                  Scrapstore House, 21 Sevier Street<br />
-                  Bristol, BS2 9LB<br />
-                  United Kingdom
-                </dd>
-              </div>
+              <dt class="text-xs uppercase tracking-widest text-zinc-500">
+                Office
+              </dt>
+              <dd class="text-zinc-300 leading-relaxed">
+                Scrapstore House, 21 Sevier Street<br />
+                Bristol, BS2 9LB<br />
+                United Kingdom
+              </dd>
             </div>
           </dl>
         </div>
@@ -161,6 +196,7 @@ async function submit() {
                   required
                   placeholder="Jane Smith"
                   class="rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                  @focus="onFieldFocus('name')"
                 />
               </div>
 
@@ -181,6 +217,7 @@ async function submit() {
                   required
                   placeholder="jane@company.com"
                   class="rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                  @focus="onFieldFocus('email')"
                 />
               </div>
             </div>
@@ -201,6 +238,7 @@ async function submit() {
                 autocomplete="tel"
                 placeholder="+44 117 000 0000"
                 class="rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                @focus="onFieldFocus('phone')"
               />
             </div>
 
@@ -217,6 +255,7 @@ async function submit() {
                 v-model="form.challenge"
                 name="challenge"
                 class="rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white outline-none transition-colors focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 [&>option]:bg-zinc-800"
+                @focus="onFieldFocus('challenge')"
               >
                 <option value="" disabled>
                   Select your primary challenge...
@@ -256,6 +295,7 @@ async function submit() {
                 rows="5"
                 placeholder="Tell us about your project, challenge, or question..."
                 class="resize-none rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 outline-none transition-colors focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                @focus="onFieldFocus('message')"
               />
             </div>
 

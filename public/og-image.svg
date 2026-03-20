@@ -1,0 +1,46 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <!-- Grid pattern -->
+  <g opacity="0.06">
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#71717a" stroke-width="1"/>
+    </pattern>
+    <rect width="1200" height="630" fill="url(#grid)"/>
+  </g>
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#accent)"/>
+  <!-- Emerald glow -->
+  <ellipse cx="600" cy="315" rx="400" ry="200" fill="#10b981" opacity="0.04"/>
+  <!-- Corner brackets -->
+  <g stroke="#10b981" stroke-width="2" fill="none" opacity="0.3">
+    <path d="M 60 60 L 60 100 M 60 60 L 100 60"/>
+    <path d="M 1140 60 L 1140 100 M 1140 60 L 1100 60"/>
+    <path d="M 60 570 L 60 530 M 60 570 L 100 570"/>
+    <path d="M 1140 570 L 1140 530 M 1140 570 L 1100 570"/>
+  </g>
+  <!-- Badge -->
+  <rect x="440" y="165" width="320" height="32" rx="16" fill="#10b981" opacity="0.1" stroke="#10b981" stroke-opacity="0.2" stroke-width="1"/>
+  <text x="600" y="186" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#34d399" letter-spacing="2" text-transform="uppercase">ELITE SOFTWARE ENGINEERING</text>
+  <!-- Headline -->
+  <text x="600" y="270" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="white" letter-spacing="-1">Engineering Intelligence</text>
+  <text x="600" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="52" font-weight="800" fill="white" letter-spacing="-1">Into the Built Environment.</text>
+  <!-- Subheadline -->
+  <text x="600" y="395" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#a1a1aa">AI-native workflows &amp; headless ERP integrations</text>
+  <text x="600" y="425" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" fill="#a1a1aa">for UK construction supply chains.</text>
+  <!-- DCT wordmark -->
+  <text x="600" y="520" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" fill="#10b981" letter-spacing="6">DIGITAL CONSTRUCTION TECHNOLOGY</text>
+  <!-- Domain -->
+  <text x="600" y="545" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#71717a">digitalconstruction.technology</text>
+</svg>

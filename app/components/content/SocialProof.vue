@@ -43,6 +43,8 @@ defineProps<{
               src="/logos/travis-perkins-plc-logo.png"
               alt="Travis Perkins plc"
               class="h-38 w-auto object-contain"
+              width="400"
+              height="152"
             />
           </a>
           <!-- Pam Building -->
@@ -56,6 +58,8 @@ defineProps<{
               src="/logos/pam-building-logo.png"
               alt="Pam Building"
               class="h-18 w-auto object-contain brightness-200"
+              width="180"
+              height="72"
             />
           </a>
           <!-- Carter Synergy -->
@@ -69,6 +73,8 @@ defineProps<{
               src="/logos/carter-synergy-logo.svg"
               alt="Carter Synergy"
               class="h-12 w-auto object-contain"
+              width="307"
+              height="48"
             />
           </a>
         </div>

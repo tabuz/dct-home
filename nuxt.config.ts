@@ -6,10 +6,24 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@nuxt/ui",
     "nuxt-studio",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/robots",
   ],
   css: ["~/assets/css/main.css"],
   devtools: { enabled: false },
   compatibilityDate: "2024-04-03",
+
+  site: {
+    url: "https://digitalconstruction.technology",
+  },
+
+  scripts: {
+    registry: {
+      googleTagManager: {
+        id: "GTM-MHPLHP6G",
+      },
+    },
+  },
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -63,8 +77,28 @@ export default defineNuxtConfig({
           content:
             "Digital Construction Technology architects AI-native workflows and headless ERP integrations for the UK's most demanding construction supply chains.",
         },
+        {
+          property: "og:url",
+          content: "https://digitalconstruction.technology",
+        },
+        {
+          property: "og:image",
+          content: "https://digitalconstruction.technology/og-image.png",
+        },
+        { property: "og:image:width", content: "1200" },
+        { property: "og:image:height", content: "630" },
+        {
+          name: "twitter:image",
+          content: "https://digitalconstruction.technology/og-image.png",
+        },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        {
+          rel: "canonical",
+          href: "https://digitalconstruction.technology",
+        },
+      ],
     },
   },
 });
